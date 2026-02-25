@@ -1,7 +1,7 @@
 /* Pure CSS Kaleidoscope — 6 kites (12 slices), full circle */
 
 :root {
-  --k-size: 80vh;
+  --k-size: min(80vh, 100vw);
   --spin-speed: 45s;
   --drift-speed: 25s;
   --image-url: url("image.png");
@@ -27,15 +27,17 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  overflow: hidden;
 }
 
 .viewport {
-  width: 100%;
-  min-height: 100vh;
+  position: fixed;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #111;
+  overflow: hidden;
 }
 
 .wheel {
