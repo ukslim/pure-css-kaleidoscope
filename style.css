@@ -85,37 +85,28 @@ body {
   background-size: 200%;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  animation: drift var(--drift-speed) ease-in-out infinite;
+  animation: drift var(--drift-speed) linear infinite;
 }
 
+/* Drift along an ellipse: more keyframes = path approximates a smooth curve */
 @keyframes drift {
-  0% {
-    background-position: 50% 50%;
-  }
-  12.5% {
-    background-position: 75% 35%;
-  }
-  25% {
-    background-position: 85% 50%;
-  }
-  37.5% {
-    background-position: 75% 65%;
-  }
-  50% {
-    background-position: 50% 75%;
-  }
-  62.5% {
-    background-position: 25% 65%;
-  }
-  75% {
-    background-position: 15% 50%;
-  }
-  87.5% {
-    background-position: 25% 35%;
-  }
-  100% {
-    background-position: 50% 50%;
-  }
+  0%    { background-position: 85% 50%; }
+  6.25% { background-position: 82% 59%; }
+  12.5% { background-position: 75% 68%; }
+  18.75% { background-position: 63% 73%; }
+  25%   { background-position: 50% 75%; }
+  31.25% { background-position: 37% 73%; }
+  37.5% { background-position: 25% 68%; }
+  43.75% { background-position: 18% 59%; }
+  50%   { background-position: 15% 50%; }
+  56.25% { background-position: 18% 41%; }
+  62.5% { background-position: 25% 32%; }
+  68.75% { background-position: 37% 27%; }
+  75%   { background-position: 50% 25%; }
+  81.25% { background-position: 63% 27%; }
+  87.5% { background-position: 75% 32%; }
+  93.75% { background-position: 82% 41%; }
+  100%  { background-position: 85% 50%; }
 }
 
 @keyframes spin {
